@@ -1,0 +1,33 @@
+<% content_for :title, "Posts" %>
+
+<div class="container mt-5">
+  <% if notice %>
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      <%= notice %>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  <% elsif alert %>
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+      <%= alert %>
+      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+  <% end %>
+
+  <div class="d-flex justify-content-between align-items-center mb-4">
+    <h1>Posts</h1>
+    <%= link_to "New Post", new_post_path, class: "btn btn-success" %>
+  </div>
+
+  <div id="posts" class="row">
+    <% @posts.each do |post| %>
+      <div class="col-md-6 col-lg-4">
+        <%= render post %>
+      </div>
+    <% end %>
+  </div>
+
+  <% if @posts.empty? %>
+    <p class="text-center">No posts available. <%= link_to "Create one now!", new_post_path, class: "btn btn-primary" %></p>
+  <% end %>
+</div>
+
