@@ -2,6 +2,10 @@ source "https://rubygems.org"
 
 gem "cssbundling-rails"
 
+gem "devise"
+
+gem "rails_admin"
+
 gem "pg", "~> 1.4"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.2.1"
@@ -61,3 +65,4 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+gem "sassc-rails"

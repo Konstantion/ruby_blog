@@ -10,11 +10,11 @@ default: &default
 
 development:
   <<: *default
-  database: blog_app_development
+  database: postgres
 
 test:
   <<: *default
-  database: blog_app_test
+  database: postgres
 
 production:
   <<: *default
