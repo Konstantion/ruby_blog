@@ -6,6 +6,10 @@ gem "devise"
 
 gem "rails_admin"
 
+gem "telegram-bot-ruby"
+
+gem "dotenv-rails", groups: [ :development, :test ]
+
 gem "pg", "~> 1.4"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.2.1"
